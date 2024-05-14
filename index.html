@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Steam</title>
+<link rel="stylesheet" type="text/css" href="css/index_ui.css">
+<script src="js/jQuery.js"></script>
+</head>
+<body>
+
+<div id="animation-container">
+  <video id="animation-video" autoplay muted>
+    <source src="webm/nila.webm" type="video/webm">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+<div id="topmu">
+  <div id="sousuo">
+    <img src="img/sousuo.png" id="search-icon">
+    <input type="text" id="search-box" style="display: none;">
+  </div>
+</div>
+
+<div id="navbar">
+  <div id="steam-menu-wrapper">
+    <span id="steam-text">S T E A M</span><span id="menu-text"> 菜单</span>
+  </div>
+  <div id="shop-menu-wrapper">
+      <img id="shop-icon" src="img/shop.png" alt="Shop">
+      <span id="shop-text">购物车</span>
+  </div>
+</div>
+
+<div id="shop-a" class="hidden">
+    <div class="left"></div>
+    <div class="right">
+      <button id="close-cart">关闭</button>
+      <div id="shop-main">
+    <div id="com1">
+        <input type="checkbox" name="in_com1" class="item-checkbox">
+        <img src="img/gta5_shop.jpg" id="img1_shop">
+        <br>
+        <span id="tit_shop1">Grand Theft Auto V</span>
+        <span id="val_shop1">￥96.00</span>
+    </div>
+    <div id="com2">
+        <input type="checkbox" name="in_com2" class="item-checkbox">
+        <img src="img/7risha_shop.jpg" id="img2_shop">
+        <br>
+        <span id="tit_shop2">7 Days to Die</span>
+        <span id="val_shop2">￥45.00</span>
+    </div>
+    <div id="com3">
+        <input type="checkbox" name="in_com3" class="item-checkbox">
+        <img src="img/horizon_shop.jpg" id="img3_shop">
+        <br>
+        <span id="tit_shop3">极限竞速：地平线4</span>
+        <span id="val_shop3">￥128.00</span>
+    </div>
+</div>
+<div id="shop-bot">
+    <input type="checkbox" id="bot-text">全选
+    <button id="del">删除</button>
+    <button id="sum">结算</button>
+</div>
+    </div>
+</div>
+
+<div id="a1" style="background-image: url('img/bg_cs2.jpg'); background-size: 110%;">
+  <div id="image-container">
+    <img src="img/cs2.jpg" alt="First Image">
+    <img src="img/srcx.jpg" alt="Second Image">
+    <img src="img/dbg2.jpg" alt="Third Image">
+    <img src="img/tt2.jpg" alt="Fourth Image">
+    <img src="img/apex.jpg" alt="Fifth Image">
+    <img src="img/xhc.jpg" alt="Sixth Image">
+  </div>
+  <img src="img/left.png" alt="Left" id="left-arrow" class="arrow">
+  <img src="img/right.png" alt="Right" id="right-arrow" class="arrow">
+</div>
+
+<div id="a2">
+  <div id="new">新情报速递</div>
+  <div id="hy">好友</div>
+  <div id="tj">推荐</div>
+</div> 
+
+<div id="a3">
+  <div id="con_new">
+    <div id="main_new">
+      <div id="main1">游戏内活动 <br>
+        <img src="img/main_new_1.jpg" id="main_img1">
+      </div>
+      <div id="main2">新闻 <br>
+        <img src="img/main_new_2.jpg" id="main_img2">
+      </div>
+      <div id="main3">重大更新 <br>  
+        <img src="img/main_new_3.jpg" id="main_img3">
+      </div>
+      <div id="main4"> 新闻 <br>
+        <img src="img/main_new_4.jpg" id="main_img4">
+      </div>
+    </div>
+    <div id="tit_new">最近在此设备上更新
+      <div id="tit_img">
+          <img src="img/tit_img1.png">
+          <img src="img/tit_img2.png">
+          <img src="img/tit_img3.png">
+          <img src="img/tit_img4.png">
+      </div>
+    </div>
+    <div id="rm_new">好友间热门
+      <div id="rm_img">
+        <img src="img/rm_img1.jpg">
+        <img src="img/rm_img2.jpg">
+        <img src="img/rm_img3.jpg">
+        <img src="img/rm_img4.jpg">
+        <img src="img/rm_img5.jpg">
+      </div>
+    </div>
+    <br><br><br><br><br><br>
+  </div>
+  <div id="con_hy">
+    <div id="dt_hy">动态</div>
+    <div id="time">5月11日
+      <hr id="hr1">
+      <img src="img/hy1.jpg" id="hy_img">
+    </div>
+    <div id="time">5月9日
+      <hr id="hr1">
+      <img src="img/hy2.jpg" id="hy_img">
+    </div>
+    <div id="time">5月8日
+      <hr id="hr1">
+      <img src="img/hy3.jpg" id="hy_img">
+    </div>
+    <br><br><br><br><br><br>
+  </div>
+  <div id="con_tj">
+    <div id="tj_ku">
+      <div id="tj_font1">接下来玩库中的这些游戏</div>
+      <div id="tj_font2">像您一样的玩家喜欢您库中这些尚未玩过的游戏</div>
+      <div id="tj_img">
+        <img src="img/tj_img1.jpg">
+        <img src="img/tj_img2.jpg">
+        <img src="img/tj_img3.jpg">
+      </div>
+    </div>
+    <br><br><br><br><br><br>
+  </div>
+</div>
+
+<script>
+$(document).ready(function(){
+  var animationContainer = $("#animation-container");
+  var animationVideo = $("#animation-video");
+  var navbar = $("#navbar");
+  var a1 = $("#a1");
+  var imageContainer = $("#image-container");
+  var enlargeInterval;
+  var clicked = false;
+
+  $(document).click(function() {
+    animationContainer.hide();
+    navbar.show();
+    $("body").css("overflow", "visible");
+    animationVideo[0].play();
+  });
+  
+  animationVideo.on("ended", function() {
+    animationVideo[0].pause();
+    animationContainer.hide();
+    navbar.show();
+    $("body").css("overflow", "visible");
+  });
+
+  enlargeBackground();
+  $("#new").css({"border-radius": "20px","background-color": "rgba(255, 255, 255, 0.1)"});
+
+  $("#image-container img").click(function() {
+    clearInterval(enlargeInterval);
+    var imageName = $(this).attr("src").split("/").pop().split(".")[0];
+    $("#a1").css("background-image", "url(img/bg_" + imageName + ".jpg)");
+    $("#a1").css("background-size", "100%");
+    enlargeBackground();
+  });
+
+  function enlargeBackground() {
+    var currentSize = 110;
+    var maxSize = 150;
+    enlargeInterval = setInterval(function() {
+      currentSize += 0.01;
+      a1.css({
+        "background-size": currentSize + "%",
+        "background-position": "center center",
+        "transition": "background-size 0, background-position 0"
+      });
+      if (currentSize >= maxSize) {
+        clearInterval(enlargeInterval);
+      }
+    }, 1);
+  }
+
+  imageContainer.find("img").hover(
+    function() {
+      if ($(this).is(':first-child')) {
+        $(this).css('transform', 'scale(1.03)');
+      } else {
+        $(this).css('transform', 'scale(1.05)');
+      }
+      $(this).siblings().css('transform', 'scale(1)');
+    },
+    function() {
+      $(this).css('transform', 'scale(1)');
+    }
+  );
+
+  $("#left-arrow").click(function() {
+    var leftValue = parseInt(imageContainer.css("left"));
+    if (leftValue < 0) {
+      imageContainer.animate({left: '+=240px'}, 'fast');
+      $("#right-arrow").prop("disabled", false);
+      if (leftValue >= -240) {
+        $("#left-arrow").prop("disabled", true);
+      }
+    }
+  });
+
+  $("#right-arrow").click(function() {
+    var leftValue = parseInt(imageContainer.css("left"));
+    if (leftValue > -480) {
+      imageContainer.animate({left: '-=240px'}, 'fast');
+      $("#left-arrow").prop("disabled", false);
+      if (leftValue <= -720) {
+        $("#right-arrow").prop("disabled", true);
+      }
+    }
+  });
+
+  $("#a2 div").click(function() {
+    $("#a2 div").css({
+      "border-radius": "",
+      "background-color": ""
+    });
+    $(this).css({
+      "border-radius": "20px",
+      "background-color": "rgba(255, 255, 255, 0.1)"
+    });
+  });
+
+  $("#a3 > div").not("#con_new").hide();
+  $("#con_new").show();
+
+  $("#new").click(function() {
+    $("#con_new").show();
+    $("#a3 > div").not("#con_new").hide();
+  });
+
+  $("#hy").click(function() {
+    $("#con_hy").show();
+    $("#a3 > div").not("#con_hy").hide();
+  });
+
+  $("#tj").click(function() {
+    $("#con_tj").show();
+    $("#a3 > div").not("#con_tj").hide();
+  });
+
+  $("#search-icon").click(function() {
+    if (!clicked) {
+      $("#search-box").fadeIn();
+      $("#search-icon").animate({
+        left: '10px',
+        right: 'auto'
+      }, 'fast');
+      clicked = true;
+    } else {
+      $("#search-box").fadeOut();
+      $("#search-icon").animate({
+        left: '1440px',
+        right: '10px'
+      }, 'fast');
+      clicked = false;
+    }
+  });
+
+  $("#shop-menu-wrapper").click(function() {
+    $("#shop-a").removeClass("hidden");
+    $("body").css("overflow", "hidden");
+  });
+
+  $("#close-cart").click(function() {
+    $("#shop-a").addClass("hidden");
+    $("body").css("overflow", "visible");
+  });
+
+  $('#bot-text').on('change', function() {
+    $('#shop-main .item-checkbox').prop('checked', this.checked);
+  });
+
+  $('#del').on('click', function() {
+    $('#shop-main .item-checkbox:checked').each(function() {
+      $(this).closest('div').remove();
+    });
+  });
+});
+</script>
+
+</body>
+</html>

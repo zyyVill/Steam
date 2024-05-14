@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Steam 登录/注册</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <script src="js/jQuery.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="forms-container">
+      <form id="login-form" class="login-form">
+        <h2>登录到您的 Steam 帐户</h2>
+        <div class="form-group">
+          <label for="login-username">用户名：</label>
+          <input type="text" id="login-username" name="login-username" required>
+        </div>
+        <div class="form-group">
+          <label for="login-password">密码：</label>
+          <input type="password" id="login-password" name="login-password" required>
+        </div>
+        <button type="button" id="login-button">登录</button>
+        <p class="toggle-form">没有帐户？<a href="#" id="signup-link">立即注册</a></p>
+      </form>
+      <form id="register-form" class="register-form">
+        <h2>注册一个新的 Steam 帐户</h2>
+        <div class="form-group">
+          <label for="signup-username">用户名：</label>
+          <input type="text" id="signup-username" name="signup-username" required>
+        </div>
+        <div class="form-group">
+          <label for="signup-email">电子邮箱：</label>
+          <input type="email" id="signup-email" name="signup-email" required>
+        </div>
+        <div class="form-group">
+          <label for="signup-password">密码：</label>
+          <input type="password" id="signup-password" name="signup-password" required>
+        </div>
+        <div class="form-group">
+          <label for="signup-confirm-password">确认密码：</label>
+          <input type="password" id="signup-confirm-password" name="signup-confirm-password" required>
+        </div>
+        <button type="submit">注册</button>
+        <p class="toggle-form">已有帐户？<a href="#" id="login-link">立即登录</a></p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function() {
+      $("#login-form").css("display", "block");
+
+      $("#signup-link").click(function(event) {
+        event.preventDefault();
+        $("#login-form").css("display", "none");
+        $("#register-form").css("display", "block");
+      });
+
+      $("#login-link").click(function(event) {
+        event.preventDefault();
+        $("#register-form").css("display", "none");
+        $("#login-form").css("display", "block");
+      });
+
+      $("#login-button").click(function() {
+        var username = $("#login-username").val();
+        var password = $("#login-password").val();
+
+        $.ajax({
+          url: 'http://localhost:3000/login',
+          type: 'POST',
+          contentType: 'application/json',
+          data: JSON.stringify({ username: username, password: password }),
+          success: function(response) {
+            window.location.href = "index.html";
+          },
+          error: function() {
+            alert("用户名或密码无效，请重试。");
+          }
+        });
+      });
+
+      $("#register-form").submit(function(event) {
+        event.preventDefault();
+
+        var username = $("#signup-username").val();
+        var email = $("#signup-email").val();
+        var password = $("#signup-password").val();
+        var confirmPassword = $("#signup-confirm-password").val();
+
+        $.ajax({
+          url: 'http://localhost:3000/register',
+          type: 'POST',
+          contentType: 'application/json',
+          data: JSON.stringify({ username: username, email: email, password: password, confirmPassword: confirmPassword }),
+          success: function(response) {
+            alert("注册成功！");
+          },
+          error: function() {
+            alert("注册失败，请重试。");
+          }
+        });
+
+        $("#signup-username").val("");
+        $("#signup-email").val("");
+        $("#signup-password").val("");
+        $("#signup-confirm-password").val("");
+      });
+    });
+  </script>
+</body>
+</html>
